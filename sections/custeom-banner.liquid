@@ -1,0 +1,75 @@
+
+{%- style -%}
+
+    .custom-banner-img {
+        width : 100%;
+        position : relative;
+    }
+
+    .custom-banner-img img {
+        width : 100%;
+    }
+
+    .custom-banner-img .banner-text {
+        position : absolute;
+        left : 50%;
+        top : 50%;
+        transform : translate(-50%, -50%)
+    }
+
+    .banner-text p{
+        font-size : {{ section.settings.size }}px;
+        color : {{ section.settings.color }};
+        margin : 0;
+        text-align: center;
+    }
+{%- endstyle -%}
+
+<div class="custom-banner-inner">
+    <div class="custom-banner-img">
+        <img src="{{ section.settings.image |  img_url: 'master' }}" alt="">
+        <div class="banner-text">
+            <p>{{ section.settings.text }}</p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Custom Banner",
+        "class": "custom-banner",
+        "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            },
+            {
+              "type": "richtext",
+              "id": "text",
+              "label": "Text"
+            },
+            {
+              "type": "color",
+              "id": "color",
+              "label": "Font Color",
+              "default": "#000000"
+            },
+            {
+              "type": "range",
+              "id": "size",
+              "min": 10,
+              "max": 100,
+              "step": 1,
+              "unit": "px",
+              "label": "Font Size",
+              "default": 20, 
+            },
+        ],
+        "presets": [
+          {
+             "name": "Custom Banner",
+          }
+        ],
+    }
+{% endschema %}

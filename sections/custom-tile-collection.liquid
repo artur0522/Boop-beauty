@@ -1,0 +1,63 @@
+{{ 'collection-tile.css' |  asset_url |  stylesheet_tag }}
+
+<section class="collection-tile-inner page-width">
+
+    <div class="collection-tile-title">
+        {{ section.settings.title }}
+    </div>
+
+    <div class="collection-tile-group">
+        {% for block in section.blocks %}
+            <div class="collection-tile-card">
+                <div class="tile-card-img">
+                    <img src="{{ block.settings.tile_img |  img_url: 'master'}}" alt="Tile Image">
+                </div>
+                <div class="tile-card-btn">
+                    <a href="{{ block.settings.collection_url }}">{{ block.settings.collection_title }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Tiles Collection",
+    "class": "custom-tile-collection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+    ],
+    "blocks": [
+      {
+        "name": "Tile Collection",
+        "type": "collection",
+        "settings": [
+           {
+             "type": "image_picker",
+             "id": "tile_img",
+             "label": "Tile Image"
+           },
+           {
+             "type": "text",
+             "id": "collection_title",
+             "label": "Collection Title"
+           },
+           {
+             "type": "url",
+             "id": "collection_url",
+             "label": "URL"
+           },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Tile Collection",
+      }
+    ]
+  }
+{% endschema %}

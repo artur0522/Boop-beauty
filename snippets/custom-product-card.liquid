@@ -1,0 +1,100 @@
+{%- comment -%}
+    Accepts:
+    - card_product: {Object} Product Liquid object (optional)
+{%- endcomment -%}
+
+
+<div class="collection-item swiper-slide">
+    <div class="item-img">
+        <div class="item-badge">{{ product.tags }}</div>
+        {% for option in product.options_with_values %}
+            {% if option.name == "Color" %}
+                {% for value in option.values %}
+                    <a href="{{ product.url }}" class="featured-img-color" id="img-{{ value.variant.id }}"><img src="{{ value.variant.image |  img_url: 'medium'}}" alt=""></a>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        <div class="alert"></div>
+    </div>
+    <div class="item-content">
+        <div class="product-condition">
+            <p><img src="{{ 'imperfect.png' |  asset_img_url  }}" width="" height="" alt="">Imperfect Container</p>
+        </div>
+        <div class="product-color">
+            {% for option in product.options_with_values %}
+                {% if option.name == "Color" %}
+                    {% for value in option.values %}
+                        <span class="color-img-item" target="img-{{ value.variant.id }}" style="background-color: rgb({{ value.swatch.color.rgb }});">{{ value.variant.id }}</span>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="card__desc">
+            <h3 class="product-name">{{ product.title }}</h3>
+            <div class="product-content">
+                {{ product.description }}
+            </div>
+        </div>
+        <div class="card__information">
+            <div class="price">
+                <div class="new-price">{{ product.price | money }}</div>
+                <div class="old-price">RRP:{{ product.compare_at_price |  money }}</div>
+            </div>
+            <div class="save">
+                save {{ product.compare_at_price |  minus: product.price |  times: 100 |  divided_by:  product.compare_at_price }} %
+            </div>
+        </div>
+
+        <product-form class="product-form" data-section-id="{{ section.id }}">
+            {%- form 'product',
+                product,
+                id: product_form_id,
+                class: 'form',
+                novalidate: 'novalidate',
+                data-type: 'add-to-cart-form'
+            -%}
+                <input
+                type="hidden"
+                name="id"
+                value="{{ product.selected_or_first_available_variant.id }}"
+                {% if product.selected_or_first_available_variant.available == false
+                    or quantity_rule_soldout
+                    or product.selected_or_first_available_variant == null
+                %}
+                    disabled
+                {% endif %}
+                class="product-variant-id"
+                >
+                <div class="product-form__buttons">
+                    <button
+                        id="ProductSubmitButton-{{ section_id }}"
+                        type="submit"
+                        name="add"
+                        class="add-to-cart product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if product.selected_or_first_available_variant.available == false
+                            or quantity_rule_soldout
+                            or product.selected_or_first_available_variant == null
+                        %}
+                        disabled
+                        {% endif %}
+                    >
+                        <span>
+                        {%- if product.selected_or_first_available_variant == null -%}
+                            {{ 'products.product.unavailable' | t }}
+                        {%- elsif product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
+                            {{ 'products.product.sold_out' | t }}
+                        {%- else -%}
+                            {{ 'products.product.add_to_cart' | t }}
+                        {%- endif -%}
+                        </span>
+                        {%- render 'loading-spinner' -%}
+                    </button>
+                </div>
+            {%- endform -%}
+            </product-form>
+
+        <p class="order">
+            Min.order:2 units
+        </p>
+    </div>
+</div>

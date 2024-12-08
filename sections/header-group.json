@@ -1,0 +1,53 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "top-left",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "none",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "announcement_bar_k8LztT": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_QnbgNN": {
+          "type": "announcement",
+          "settings": {
+            "text": "up to 80% off everything",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_QnbgNN"
+      ],
+      "settings": {
+        "color_scheme": "scheme-8e7de0fa-a8b6-4bc4-af46-b5f655d1e1df",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    }
+  },
+  "order": [
+    "header",
+    "announcement_bar_k8LztT"
+  ]
+}

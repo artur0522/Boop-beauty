@@ -1,0 +1,20 @@
+<section class="practice-wrapper">
+    {%- form 'product', product -%}
+        <button type="submit">Add to cart</button>
+    {%- endform -%}
+</section>
+
+{% schema %}
+    {
+        "name": "Practice",
+        "class": "practice",
+        "settings": [
+        
+        ],
+        "presets": [
+          {
+            "name": "Custom Practice"
+          }
+        ],
+    }
+{% endschema %}

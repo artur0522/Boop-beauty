@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 28
+      }
+    },
+    "custeom_banner_EaU7EJ": {
+      "type": "custeom-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Boop_Beauty_Desktop_Hero_Banner_2880x1060_-_ESPA_Christmas_Countdown.jpg",
+        "text": "<p>Welcome to our Shop.aaa<\/p><p>we have everything for you<\/p>",
+        "color": "#ff0000",
+        "size": 10
+      }
+    },
+    "custom_three_banners_jwabxb": {
+      "type": "custom-three-banners",
+      "blocks": {
+        "banner_4mExtQ": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/freshly-baked-bread-in-hands.jpg",
+            "text": "Bread",
+            "size": 50,
+            "color": "#08ff00"
+          }
+        },
+        "banner_MRPA7q": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_311.png",
+            "text": "Rice",
+            "size": 40,
+            "color": "#1c56ea"
+          }
+        },
+        "banner_Ykbh3t": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/freshly-baked-bread-in-hands.jpg",
+            "text": "Man",
+            "size": 30,
+            "color": "#121212"
+          }
+        }
+      },
+      "block_order": [
+        "banner_4mExtQ",
+        "banner_MRPA7q",
+        "banner_Ykbh3t"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "custeom_banner_EaU7EJ",
+    "custom_three_banners_jwabxb"
+  ]
+}

@@ -1,0 +1,48 @@
+{{ 'custom-button-collection.css' |  asset_url |  stylesheet_tag }}
+
+<div class="title">
+  {{ section.settings.title }}
+</div>
+
+<div class="custom-btn-collection-inner">
+
+  {% for block in section.blocks %}
+      <a class="btn-collection" href="{{ block.settings.collection_url }}">{{ block.settings.btn_name }}</a>    
+  {% endfor %}
+</div>
+{% schema %}
+    {
+        "name": "Custom Button Collection",
+        "class": "custom-btn-collection page-width",
+        "settings" : [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+        ],
+        "blocks": [
+          {
+            "name": "Button-Collection",
+            "type": "Collection",
+            "settings": [ 
+               {
+                 "type": "text",
+                 "id": "btn_name",
+                 "label": "Button"
+               },
+               {
+                 "type": "url",
+                 "id": "collection_url",
+                 "label": "URL"
+               },
+            ]
+          }
+        ],
+        "presets": [
+          {
+            "name": "Custom Button Collection",
+          }
+        ],
+    }
+{% endschema %}

@@ -1,0 +1,93 @@
+{{ 'slide-collection.css' | asset_url |  stylesheet_tag }}
+{%- style -%}
+
+  .recently-view-products {
+    max-width:1440px;
+    margin : auto;
+    padding : 15px;
+  }
+
+  .viewed_product-group {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap:20px;
+  }
+
+  .product_item {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .product_img {
+    flex: 1;
+  }
+
+  .product_img img {
+    width:100%;
+    height : 100%;
+    object-fit : cover;
+    padding: 10px;
+  }
+
+  .product_info {
+    padding: 10px;
+  }
+
+  .product_title {
+    font-size: 20px;
+    font-family: montserrat;
+  }
+{%- endstyle -%}
+
+<section class="recently-view-products">
+  <div class="viewed_product-group">
+  </div>
+</section>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script>
+  var viewedProducts = JSON.parse(localStorage.getItem('recently_viewed_products'));
+  for(product of viewedProducts){
+      fetch(`/products/${product.productHandle}?view=card-view`)
+      .then(response => {
+        if(response.status == 200 && response.ok) {
+          return response.text();
+        } 
+      }).then(result => {
+        document.querySelector('.viewed_product-group').innerHTML += result;
+      }).finally(() => {
+        document.querySelectorAll('.collection-item').forEach(ele => {
+          ele.querySelectorAll('.color-img-item').forEach(element => {
+            element.addEventListener('click', function () {
+                ele.querySelector('.product-form .product-variant-id').value = this.innerHTML;
+                ele.querySelectorAll('.featured-img-color').forEach(item => {
+                    item.style.display = 'none';
+                })
+                document.querySelector(`#${this.getAttribute('target')}`).style.display = "block";
+            })
+          })
+          ele.querySelector('.color-img-item').click();
+        })
+      })
+    }
+    
+  
+</script>
+
+{% schema %}
+    {
+        "name": "Recently View Products",
+        "class": "recently-view-products",
+        "settings": [
+        
+        ],
+        "presets": [
+          {
+            "name": "Recently View Products"
+          }
+        ]
+    }
+{% endschema %}

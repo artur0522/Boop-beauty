@@ -1,0 +1,60 @@
+{{ 'slidetext.css' |  asset_url |  stylesheet_tag}}
+<div class="slide-text-inner">
+  <div class="slide-text-group swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="slide-item swiper-slide">
+          <div class="item-txt">
+              <div class="item-title">
+                  {{ block.settings.title }}
+              </div>
+              <div class="item-content">
+                  {{ block.settings.content }}
+              </div>
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+    
+
+{{ 'slidetext.js' |  asset_url |  script_tag }}
+<script>
+  var swiper = new Swiper('.slide-text-inner', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop : true
+})
+</script>
+
+{% schema %}
+    {
+        "name": "Slide Text",
+        "class": "slide-text page-width",
+        "settings": [
+        
+        ],
+        "blocks": [
+          {
+            "name": "Slide",
+            "type": "slide",
+            "settings": [
+               {
+                 "type": "text",
+                 "id": "title",
+                 "label": "Title"
+               },
+               {
+                 "type": "richtext",
+                 "id": "content",
+                 "label": "Content"
+               },
+            ]
+          }
+        ],
+        "presets": [
+          {
+            "name": "Text Slide",
+          }
+        ],
+    }
+{% endschema %}

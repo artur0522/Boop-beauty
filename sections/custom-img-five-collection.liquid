@@ -1,0 +1,64 @@
+{{ 'custom-five-collection.css' |  asset_url |  stylesheet_tag }}
+
+<div class="image-collection two-block">
+    <div class="collection-card">
+        <div class="item-iamge">
+            <img src="{{ 'collection (1).png' |  asset_url }}" alt="Collection Image">
+        </div>
+        <div class="item-btn">
+            <a href="">offers</a>
+        </div>
+    </div>
+    <div class="collection-card">
+        <div class="item-iamge">
+            <img src="{{ 'collection (2).png' |  asset_url }}" alt="Collection Image">
+            </div>
+        <div class="item-btn">
+            <a href="">Best sellers</a>
+        </div>
+    </div>
+</div>
+<div class="image-collection one-block">
+    <div class="collection-card">
+        <div class="item-iamge">
+            <img src="{{ 'collection (4).png' |  asset_url }}" alt="Collection Image">
+        </div>
+        <div class="item-btn">
+            <a href="">trending</a>
+        </div>
+    </div>
+</div>
+<div class="image-collection two-block">
+    <div class="collection-card">
+        <div class="item-iamge">
+            <img src="{{ 'collection (2).png' |  asset_url }}" alt="Collection Image">
+        </div>
+        <div class="item-btn">
+            <a href="">new in</a>
+        </div>
+    </div>
+    <div class="collection-card">
+        <div class="item-iamge">
+            <img src="{{ 'collection (5).png' |  asset_url }}" alt="Collection Image">
+            </div>
+        <div class="item-btn">
+            <a href="">skincare</a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+    {
+        "name": "Custom Five Collection",
+        "class": "custom-five-collection page-width",
+        "settings": [
+
+        ],
+        "presets": [
+          {
+            "name": "Custom Five Image Collection",
+          }
+        ],
+    }
+{% endschema %}

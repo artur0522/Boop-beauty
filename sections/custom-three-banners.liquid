@@ -1,0 +1,91 @@
+{%- style -%}
+    .banner-item {
+      position : relative;
+      flex : 1;
+    }
+
+    .item-text {
+      position : absolute;
+      top : 50%;
+      left : 50%;
+      transform : translate(-50%, -50%);
+    }
+
+    .banners-inner-group {
+      display : flex;
+      grid-column-gap: 20px;
+    }
+
+    .banner-item .item-img img {
+      width : 100%;
+      height : 250px;
+      object-fit : cover;
+    }
+{%- endstyle -%}
+
+<div class="custom-banners-inner">
+    <div class="banners-inner-group">
+        {% for block in section.blocks %}
+          {%- if block.settings.image != blank -%}
+            <div class="banner-item">
+              <div class="item-img">
+                  <img src="{{ block.settings.image | img_url: 'master' }}" alt="Banner Image">
+              </div>
+              <div class="item-text">
+                  <p style="font-size:{{ block.settings.size }}px; color: {{ block.settings.color }}">{{ block.settings.text }}</p>
+              </div>
+            </div>
+          {%- endif -%}
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Custom Three Banners",
+        "class": "custom-three-banners page-width",
+        "settings": [
+            
+        ],
+        "blocks": [
+          {
+            "name": "Banner",
+            "type": "banner",
+            "limit": 3,
+            "settings": [
+               {
+                 "type": "image_picker",
+                 "id": "image",
+                 "label": "Banner Image"
+               },
+               {
+                 "type": "text",
+                 "id": "text",
+                 "label": "Text"
+               },
+               {
+                "type": "range",
+                "id": "size",
+                "min": 10,
+                "max": 50,
+                "step": 1,
+                "unit": "px",
+                "label": "Font Size",
+                "default" : 20 
+              },
+              {
+                "type": "color",
+                "id": "color",
+                "label": "Font Color",
+                "default": "#000000"
+              },
+            ]
+          }
+        ],
+        "presets": [
+          {
+            "name": "Custom Three Small Banners",
+          }
+        ],
+    }
+{% endschema %}

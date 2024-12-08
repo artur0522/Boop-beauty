@@ -1,0 +1,361 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_290.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "slidetext_VhWRx9": {
+      "type": "slidetext",
+      "blocks": {
+        "slide_prUKUX": {
+          "type": "slide",
+          "settings": {
+            "title": "Boop Sources",
+            "content": "<p>We work with luxury beauty & wellness brands to source products when they make too much, discontinue or items don’t look perfect<\/p>"
+          }
+        },
+        "slide_yWexVL": {
+          "type": "slide",
+          "settings": {
+            "title": "Your rescue",
+            "content": "<p>Shop at up 80% off the RRP. We quality check each item<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_prUKUX",
+        "slide_yWexVL"
+      ],
+      "settings": {}
+    },
+    "custom_button_collection_NCVUV6": {
+      "type": "custom-button-collection",
+      "blocks": {
+        "collection_4tzKfa": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "Make Up",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_VMUQmD": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "Skincare",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_kt7TQm": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "Fragrance",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_rN8Uh6": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "Hair",
+            "collection_url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "collection_4tzKfa",
+        "collection_VMUQmD",
+        "collection_kt7TQm",
+        "collection_rN8Uh6"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "custom_img_five_collection_UnkTEw": {
+      "type": "custom-img-five-collection",
+      "settings": {}
+    },
+    "custom_slide_collection_bJBjT6": {
+      "type": "custom-slide-collection",
+      "settings": {
+        "collection": "selling-fast"
+      }
+    },
+    "custom_tile_collection_GkczXR": {
+      "type": "custom-tile-collection",
+      "blocks": {
+        "collection_pW9gq3": {
+          "type": "collection",
+          "settings": {
+            "tile_img": "shopify:\/\/shop_images\/Rectangle_311_0658375a-e560-46d1-b612-81663b0b950b.png",
+            "collection_title": "UOMA",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_8zcYiL": {
+          "type": "collection",
+          "settings": {
+            "tile_img": "shopify:\/\/shop_images\/Rectangle_312.png",
+            "collection_title": "revolution",
+            "collection_url": ""
+          }
+        },
+        "collection_crPfCt": {
+          "type": "collection",
+          "settings": {
+            "tile_img": "shopify:\/\/shop_images\/Rectangle_316.png",
+            "collection_title": "Made by cooper",
+            "collection_url": ""
+          }
+        },
+        "collection_Fercb4": {
+          "type": "collection",
+          "settings": {
+            "tile_img": "shopify:\/\/shop_images\/Rectangle_315.png",
+            "collection_title": "Hair",
+            "collection_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_pW9gq3",
+        "collection_8zcYiL",
+        "collection_crPfCt",
+        "collection_Fercb4"
+      ],
+      "settings": {
+        "title": "Shop Our Top Brands"
+      }
+    },
+    "custom_button_collection_fbmDBY": {
+      "type": "custom-button-collection",
+      "blocks": {
+        "collection_fke8Vt": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "Makeup",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_6gRCzz": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "skincare",
+            "collection_url": ""
+          }
+        },
+        "collection_qwBzyn": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "fragrance",
+            "collection_url": ""
+          }
+        },
+        "collection_jnDdga": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "hair",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_mJxCqb": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "offers",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_YJKjEy": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "body",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_fGdEPX": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "rescue bags",
+            "collection_url": "shopify:\/\/collections"
+          }
+        },
+        "collection_a68Vkj": {
+          "type": "Collection",
+          "settings": {
+            "btn_name": "health & wellness",
+            "collection_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_fke8Vt",
+        "collection_6gRCzz",
+        "collection_qwBzyn",
+        "collection_jnDdga",
+        "collection_mJxCqb",
+        "collection_YJKjEy",
+        "collection_fGdEPX",
+        "collection_a68Vkj"
+      ],
+      "settings": {
+        "title": "Why not try these?"
+      }
+    },
+    "reviews_group_k34bLf": {
+      "type": "reviews-group",
+      "settings": {}
+    },
+    "image_banner_C3Hwz3": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_3wgAie": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_fMpU7F": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_BEgCVb": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_3wgAie",
+        "text_fMpU7F",
+        "buttons_BEgCVb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/DesktopFooter-2880x720_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "other_pages_intro_UEiiVG": {
+      "type": "other-pages-intro",
+      "blocks": {
+        "other_page_Y4JPEG": {
+          "type": "OtherPage",
+          "settings": {
+            "other_page": "shopify:\/\/shop_images\/Itv_1.png"
+          }
+        },
+        "other_page_zYx4hN": {
+          "type": "OtherPage",
+          "settings": {
+            "other_page": "shopify:\/\/shop_images\/bazaar.webp"
+          }
+        },
+        "other_page_gEHmE8": {
+          "type": "OtherPage",
+          "settings": {
+            "other_page": "shopify:\/\/shop_images\/elle.png"
+          }
+        },
+        "other_page_GYep9f": {
+          "type": "OtherPage",
+          "settings": {
+            "other_page": "shopify:\/\/shop_images\/Marie_Claire.png"
+          }
+        },
+        "other_page_Va97RY": {
+          "type": "OtherPage",
+          "settings": {
+            "other_page": "shopify:\/\/shop_images\/ok.png"
+          }
+        },
+        "other_page_C9UREc": {
+          "type": "OtherPage",
+          "settings": {
+            "other_page": "shopify:\/\/shop_images\/Sheerluxe.png"
+          }
+        }
+      },
+      "block_order": [
+        "other_page_Y4JPEG",
+        "other_page_zYx4hN",
+        "other_page_gEHmE8",
+        "other_page_GYep9f",
+        "other_page_Va97RY",
+        "other_page_C9UREc"
+      ],
+      "settings": {
+        "title": "Don't just hear it from us"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "slidetext_VhWRx9",
+    "custom_button_collection_NCVUV6",
+    "custom_img_five_collection_UnkTEw",
+    "custom_slide_collection_bJBjT6",
+    "custom_tile_collection_GkczXR",
+    "custom_button_collection_fbmDBY",
+    "reviews_group_k34bLf",
+    "image_banner_C3Hwz3",
+    "other_pages_intro_UEiiVG"
+  ]
+}
